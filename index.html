@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Shahid — App & Web Developer</title>
+  <meta name="description" content="Portfolio of Ali Shahid — App Developer & Web Developer specializing in Flutter, React Native, Swift, Kotlin, and modern full-stack web applications.">
+  <meta name="theme-color" content="#FBF9F4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="craft-body">
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow ambient-glow--1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--2" aria-hidden="true"></div>
+
+  <!-- ====== CRAFT NAVIGATION ====== -->
+  <header class="craft-nav" id="craftNav">
+    <div class="craft-container craft-nav__inner">
+      <a href="#hero" class="craft-logo">
+        <div class="nav-avatar-circle">
+          <img src="./assets/profile.jpg" alt="Ali Shahid" class="nav-avatar-img">
+          <span class="nav-avatar-dot"></span>
+        </div>
+        <div class="nav-logo-text">
+          <span class="logo-name">ali shahid</span><span class="logo-dot">.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="craft-links" id="desktopNav" aria-label="Main Navigation">
+        <a href="#projects" class="craft-link" data-section="projects">Projects</a>
+        <a href="#about" class="craft-link" data-section="about">About</a>
+        <a href="#skills" class="craft-link" data-section="skills">Stack</a>
+        <a href="#contact" class="craft-link" data-section="contact">Contact</a>
+      </nav>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="craft-nav__actions">
+        <a href="#contact" class="craft-btn craft-btn--sm craft-btn--accent">Say Hello</a>
+        <button class="craft-burger" id="burgerToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Smart Slim Horizontal Scroll Progress Bar (Tracks Page Reading Position) -->
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop"></div>
+    <div class="mobile-drawer__content">
+      <div class="mobile-drawer__top">
+        <div class="drawer-user-info">
+          <div class="drawer-avatar-circle">
+            <img src="./assets/profile.jpg" alt="Ali Shahid" class="drawer-avatar-img">
+          </div>
+          <div class="drawer-meta">
+            <span class="mobile-logo">ali shahid<span class="logo-dot">.</span></span>
+            <span class="drawer-role">App & Web Developer</span>
+          </div>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-drawer__nav">
+        <a href="#projects" class="drawer-link"><span class="drawer-link__num">01</span> Projects</a>
+        <a href="#about" class="drawer-link"><span class="drawer-link__num">02</span> About The Craft</a>
+        <a href="#skills" class="drawer-link"><span class="drawer-link__num">03</span> Tech Stack</a>
+        <a href="#contact" class="drawer-link"><span class="drawer-link__num">04</span> Let's Connect</a>
+      </nav>
+      <div class="mobile-drawer__bottom">
+        <a href="https://wa.me/923374047627" target="_blank" rel="noopener noreferrer" class="drawer-whatsapp-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+          <span>Chat on WhatsApp (+92 337 4047627)</span>
+        </a>
+        <p class="drawer-status">
+          <span class="status-pulse-dot"></span> Available for freelance projects
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====== HERO SECTION ====== -->
+    <section class="craft-hero" id="hero">
+      <div class="craft-container craft-hero__grid">
+        
+        <!-- Left: Text Content -->
+        <div class="craft-hero__info">
+          
+          <!-- Unified Status Badge -->
+          <div class="status-pill animate-fade-in" style="--delay: 0.1s;">
+            <span class="status-radar">
+              <span class="radar-core"></span>
+              <span class="radar-wave"></span>
+            </span>
+            <span class="status-text">Available for mobile & web craft</span>
+          </div>
+
+          <!-- Main Title with Animated Words -->
+          <h1 class="craft-hero__title animate-fade-in" style="--delay: 0.2s;">
+            Building apps with <span class="shimmer-text">soul</span> and solid code.
+          </h1>
+
+          <!-- Dynamic Role Text -->
+          <div class="craft-hero__role animate-fade-in" style="--delay: 0.3s;">
+            <span class="role-static">Specialized in</span>
+            <span class="role-dynamic" id="roleRotator">Mobile App Development</span>
+            <span class="role-cursor">|</span>
+          </div>
+
+          <!-- Mobile Centered Studio Portrait Card (Visible on mobile screens < 768px) -->
+          <div class="mobile-portrait-card-wrap animate-fade-in" style="--delay: 0.35s;">
+            <div class="mobile-portrait-card">
+              <div class="mobile-portrait-inner">
+                <img src="./assets/profile.jpg" alt="Ali Shahid — App & Web Developer" class="mobile-portrait-img">
+                <div class="mobile-portrait-glass">
+                  <span class="mobile-portrait-name">Ali Shahid</span>
+                  <span class="mobile-portrait-title">Engineer & Creator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="craft-hero__bio animate-fade-in" style="--delay: 0.4s;">
+            Hi, I’m <strong>Ali Shahid</strong>. I engineer high-performance mobile applications and modern web experiences. Focused on smooth animations, clean architectures, and software that feels crafted with intention.
+          </p>
+
+          <!-- Interactive Tech Pills -->
+          <div class="craft-pills animate-fade-in" style="--delay: 0.5s;">
+            <span class="craft-tag tag--terracotta">Capacitor & Android</span>
+            <span class="craft-tag tag--sage">Gemini AI Flash</span>
+            <span class="craft-tag tag--ochre">React & TypeScript</span>
+            <span class="craft-tag tag--slate">Node.js Express</span>
+            <span class="craft-tag tag--sand">Tailwind CSS</span>
+            <span class="craft-tag tag--terracotta">Cross-Platform UI</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="craft-hero__buttons animate-fade-in" style="--delay: 0.6s;">
+            <a href="#projects" class="craft-btn craft-btn--primary">
+              <span>View Selected Work</span>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#about" class="craft-btn craft-btn--outline">About The Craft</a>
+          </div>
+
+        </div>
+
+        <!-- Right: Animated Photo Card with 3D Tilt -->
+        <div class="craft-hero__visual animate-fade-in" style="--delay: 0.4s;">
+          <div class="craft-card-wrapper" id="photoTiltCard">
+            
+            <!-- Ambient Card Glow -->
+            <div class="card-glow-halo"></div>
+
+            <!-- Floating Badge (Top Left) -->
+            <div class="floating-craft-badge badge--top-left animate-float-slow">
+              <span class="badge-icon">⚡</span>
+              <span class="badge-label">Cross-Platform Specialist</span>
+            </div>
+
+            <!-- Main Photo Container -->
+            <div class="craft-photo-card">
+              <div class="photo-card-inner">
+                <img src="./assets/profile.jpg" alt="Ali Shahid — App & Web Developer" class="craft-avatar" id="heroAvatar">
+                <div class="photo-overlay-glass">
+                  <div class="photo-badge-chip">
+                    <span class="chip-name">Ali Shahid</span>
+                    <span class="chip-title">Engineer & Creator</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#projects" class="craft-scroll-cue" aria-label="Scroll to projects">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-label">Scroll to explore</span>
+      </a>
+    </section>
+
+    <!-- ====== STATS & HIGHLIGHTS ====== -->
+    <section class="craft-stats-bar">
+      <div class="craft-container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-number" data-target="100">0%</div>
+            <div class="stat-desc">Mobile & Desktop Responsive</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-number" data-target="60">60fps</div>
+            <div class="stat-desc">Fluid Motion & Tactile Feel</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-number" data-target="100">100%</div>
+            <div class="stat-desc">Clean, Maintainable Architecture</div>
+          </div>
+          <div class="stat-item reveal-on-scroll">
+            <div class="stat-label-craft">Modern Tech</div>
+            <div class="stat-desc">Native & Hybrid Cross-Platform</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS SECTION ====== -->
+    <section class="craft-section craft-projects" id="projects">
+      <div class="craft-container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="section-kicker">
+            <span class="kicker-num">01</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-text">Selected Works</span>
+          </div>
+          <h2 class="section-title">Engineered with care and precision.</h2>
+          <p class="section-subtitle">Real apps designed for real users, balancing intuitive interaction with robust code.</p>
+
+          <!-- Filter Tabs -->
+          <div class="project-filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Projects (3)</button>
+            <button class="filter-tab" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-tab" data-filter="web">Web & AI Systems</button>
+          </div>
+        </div>
+
+        <div class="projects-carousel-wrapper">
+          <div class="projects-carousel-track" id="projectsTrack">
+            
+            <!-- Project Card 1: FlowFit -->
+            <article class="project-card-craft" data-category="mobile">
+              <div class="project-card-craft__top">
+                <div class="project-tag-cluster">
+                  <span class="craft-tag tag--terracotta">Mobile App</span>
+                  <span class="craft-tag tag--sand">Capacitor 8</span>
+                  <span class="project-live-indicator"><span class="pulse-mini"></span> Native Android</span>
+                </div>
+                <div class="project-icon-box icon-box--terracotta">🏋️‍♂️</div>
+              </div>
+
+              <h3 class="project-card-craft__title">FlowFit</h3>
+              <p class="project-card-craft__desc">
+                High-performance mobile workout tracking and fitness application built with Capacitor for native Android deployment. Features an interactive exercise directory with muscle engagement mapping, smart metabolic calorie calculator, integrated Jamendo background audio player with Dynamic Island controls, and curated 3D fitness persona avatars.
+              </p>
+
+              <div class="project-mini-specs">
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Tech:</span>
+                  <span class="mini-spec-v">Capacitor 8.x · Android · JS</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Engine:</span>
+                  <span class="mini-spec-v">3D Personas · Muscle Maps</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Audio:</span>
+                  <span class="mini-spec-v">Jamendo Dynamic Island Player</span>
+                </div>
+              </div>
+
+              <div class="project-pill-row">
+                <span class="mini-pill">Capacitor 8</span>
+                <span class="mini-pill">Android SDK</span>
+                <span class="mini-pill">Web Audio API</span>
+                <span class="mini-pill">Offline-First</span>
+              </div>
+
+              <div class="project-card-craft__footer">
+                <button class="craft-btn craft-btn--sm craft-btn--primary open-modal-btn" data-modal="flowfit">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+                <a href="https://github.com/ranaalishahid442-sys/FlowFit" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--sm craft-btn--outline">
+                  <span>GitHub Code</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project Card 2: Bol-Kisan -->
+            <article class="project-card-craft" data-category="web mobile">
+              <div class="project-card-craft__top">
+                <div class="project-tag-cluster">
+                  <span class="craft-tag tag--sage">AI & Voice</span>
+                  <span class="craft-tag tag--ochre">Gemini 2.5 Flash</span>
+                  <span class="project-live-indicator"><span class="pulse-mini pulse-sage"></span> Trilingual AI</span>
+                </div>
+                <div class="project-icon-box icon-box--sage">🌾</div>
+              </div>
+
+              <h3 class="project-card-craft__title">Bol-Kisan <span class="urdu-subtext">(بول کسان)</span></h3>
+              <p class="project-card-craft__desc">
+                Voice-first agricultural AI assistant for rural Pakistani farmers (Urdu, Punjabi, Saraiki). Ingests raw audio directly into Google Gemini 2.5 Flash for natural dialect recognition, providing real-time weather irrigation advice, live mandi crop market rates, and pest diagnosis.
+              </p>
+
+              <div class="project-mini-specs">
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Tech:</span>
+                  <span class="mini-spec-v">Gemini 2.5 · React 18 · Express</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Dialects:</span>
+                  <span class="mini-spec-v">Saraiki · Urdu · Shahmukhi</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Radar:</span>
+                  <span class="mini-spec-v">Open-Meteo Rain & Wind Radar</span>
+                </div>
+              </div>
+
+              <div class="project-pill-row">
+                <span class="mini-pill mini-pill--sage">Gemini 2.5 Flash</span>
+                <span class="mini-pill mini-pill--sage">React 18</span>
+                <span class="mini-pill mini-pill--sage">Node Express</span>
+                <span class="mini-pill mini-pill--sage">Open-Meteo</span>
+              </div>
+
+              <div class="project-card-craft__footer">
+                <button class="craft-btn craft-btn--sm craft-btn--primary open-modal-btn" data-modal="bolkisan">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+                <a href="https://github.com/ranaalishahid442-sys/Bol-Kisan" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--sm craft-btn--outline">
+                  <span>GitHub Code</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Project Card 3: PMAS Arid Hostel Portal -->
+            <article class="project-card-craft" data-category="web">
+              <div class="project-card-craft__top">
+                <div class="project-tag-cluster">
+                  <span class="craft-tag tag--slate">Campus System</span>
+                  <span class="craft-tag tag--terracotta">React 19 & TS</span>
+                  <span class="project-live-indicator"><span class="pulse-mini pulse-slate"></span> Live Portal</span>
+                </div>
+                <div class="project-icon-box icon-box--slate">🏛️</div>
+              </div>
+
+              <h3 class="project-card-craft__title">PMAS Arid Hostel Portal</h3>
+              <p class="project-card-craft__desc">
+                Official-style student hostel residence portal engineered for Pir Mehr Ali Shah Arid Agriculture University Rawalpindi. Streamlines merit notifications, generates dynamic verifiable bank fee challan slips (PKR 18,500), and provides smart degree-based room & roommate matching.
+              </p>
+
+              <div class="project-mini-specs">
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Tech:</span>
+                  <span class="mini-spec-v">React 19 · TypeScript · Tailwind</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Finance:</span>
+                  <span class="mini-spec-v">Fee Challan Slips (PKR 18.5k)</span>
+                </div>
+                <div class="mini-spec-item">
+                  <span class="mini-spec-k">Allocation:</span>
+                  <span class="mini-spec-v">Degree & Lifestyle Matcher</span>
+                </div>
+              </div>
+
+              <div class="project-pill-row">
+                <span class="mini-pill mini-pill--slate">TypeScript</span>
+                <span class="mini-pill mini-pill--slate">Tailwind CSS</span>
+                <span class="mini-pill mini-pill--slate">Vite</span>
+                <span class="mini-pill mini-pill--slate">UAAR System</span>
+              </div>
+
+              <div class="project-card-craft__footer">
+                <button class="craft-btn craft-btn--sm craft-btn--primary open-modal-btn" data-modal="aridhostel">
+                  <span>View Details</span>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </button>
+                <a href="https://github.com/ranaalishahid442-sys/arid-hostel-portal" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--sm craft-btn--outline">
+                  <span>GitHub Code</span>
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Smart Slim Horizontal Scroll Bar Indicator for Projects -->
+          <div class="carousel-nav-bar" id="carouselNavBar">
+            <div class="carousel-track-line">
+              <div class="carousel-track-thumb" id="carouselThumb"></div>
+            </div>
+            <div class="carousel-hint-text">
+              <span>Swipe horizontally to view projects</span>
+              <span class="swipe-arrow">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT / THE CRAFT ====== -->
+    <section class="craft-section craft-about" id="about">
+      <div class="craft-container">
+        
+        <div class="about-grid">
+          
+          <!-- Left: Narrative -->
+          <div class="about-narrative reveal-on-scroll">
+            <div class="section-kicker">
+              <span class="kicker-num">02</span>
+              <span class="kicker-line"></span>
+              <span class="kicker-text">The Philosophy</span>
+            </div>
+            <h2 class="section-title">Code that performs. Interfaces that delight.</h2>
+            <p class="about-lead">
+              I believe building good digital products requires the mindset of both an engineer and a craftsman. It is not just about writing syntax—it is about how each interaction feels in the hand.
+            </p>
+            <p class="about-body">
+              Whether architecting cross-platform mobile apps (Capacitor/Flutter) or engineering multimodal AI systems and responsive campus portals, I prioritize three fundamentals: rock-solid performance, maintainable clean architecture, and thoughtful micro-interactions.
+            </p>
+
+            <div class="about-craft-points">
+              <div class="craft-point">
+                <div class="point-num">01</div>
+                <div>
+                  <h4>Cross-Platform Fluency</h4>
+                  <p>Single codebase architectures with native-grade performance on both iOS and Android.</p>
+                </div>
+              </div>
+              <div class="craft-point">
+                <div class="point-num">02</div>
+                <div>
+                  <h4>Zero-Compromise Responsiveness</h4>
+                  <p>Carefully tuned layouts that look balanced across 360px phones, tablets, and 4K displays.</p>
+                </div>
+              </div>
+              <div class="craft-point">
+                <div class="point-num">03</div>
+                <div>
+                  <h4>Thoughtful Motion</h4>
+                  <p>Subtle, intentional transitions that guide user focus without causing motion fatigue.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Craft Badges -->
+          <div class="about-cards-column reveal-on-scroll">
+            
+            <div class="craft-info-card card--accent-warm">
+              <span class="card-icon">🎯</span>
+              <h3>Bespoke Engineering</h3>
+              <p>Tailored solutions built around client requirements, whether launching an MVP from scratch or scaling an existing product.</p>
+            </div>
+
+            <div class="craft-info-card card--accent-sage">
+              <span class="card-icon">⚡</span>
+              <h3>Speed & Optimization</h3>
+              <p>Assets compressed, bundle sizes minimized, and layout shifts eliminated for snappy sub-second experiences.</p>
+            </div>
+
+            <div class="craft-info-card card--accent-ochre">
+              <span class="card-icon">🤝</span>
+              <h3>Freelance & Collaboration</h3>
+              <p>Ready to collaborate on contract, freelance, or long-term projects with transparent communication and punctual delivery.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== TECH STACK ====== -->
+    <section class="craft-section craft-skills" id="skills">
+      <div class="craft-container">
+        
+        <div class="section-header text-center reveal-on-scroll">
+          <div class="section-kicker justify-center">
+            <span class="kicker-num">03</span>
+            <span class="kicker-line"></span>
+            <span class="kicker-text">Tech Arsenal</span>
+          </div>
+          <h2 class="section-title">The tools I use to bring ideas to life.</h2>
+          <p class="section-subtitle">A comprehensive toolkit spanning mobile platforms, web frameworks, and backend clouds.</p>
+        </div>
+
+        <div class="skills-categories-grid">
+          
+          <!-- Category 1: Mobile -->
+          <div class="skill-category-box reveal-on-scroll">
+            <div class="cat-header cat-header--terracotta">
+              <span class="cat-icon">📱</span>
+              <h3>Mobile Engineering</h3>
+            </div>
+            <div class="skills-tile-grid">
+              <div class="skill-tile">
+                <span class="skill-name">Capacitor 8</span>
+                <span class="skill-badge badge--pro">Primary</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Android SDK</span>
+                <span class="skill-badge">Native Build</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Flutter & Dart</span>
+                <span class="skill-badge">Cross-Platform</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">React Native</span>
+                <span class="skill-badge">Hybrid Mobile</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Web Audio API</span>
+                <span class="skill-badge">Sound/Music</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Mobile UX/UI</span>
+                <span class="skill-badge">Haptics & Touch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Web & AI Systems -->
+          <div class="skill-category-box reveal-on-scroll">
+            <div class="cat-header cat-header--sage">
+              <span class="cat-icon">🌐</span>
+              <h3>Web & AI Systems</h3>
+            </div>
+            <div class="skills-tile-grid">
+              <div class="skill-tile">
+                <span class="skill-name">Gemini 2.5 Flash</span>
+                <span class="skill-badge badge--pro">Multimodal AI</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">React 18 / 19</span>
+                <span class="skill-badge">Frontend</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">TypeScript</span>
+                <span class="skill-badge">Type-Safe</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Tailwind CSS</span>
+                <span class="skill-badge">Utility UI</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Vite & ES6+</span>
+                <span class="skill-badge">Modern Tooling</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-badge">All Devices</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Cloud & Backend -->
+          <div class="skill-category-box reveal-on-scroll">
+            <div class="cat-header cat-header--slate">
+              <span class="cat-icon">🛠️</span>
+              <h3>Backend & Cloud Tools</h3>
+            </div>
+            <div class="skills-tile-grid">
+              <div class="skill-tile">
+                <span class="skill-name">Node.js Express</span>
+                <span class="skill-badge">REST API</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-badge">Version Control</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Edge TTS / Audio</span>
+                <span class="skill-badge">Voice Engine</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Open-Meteo API</span>
+                <span class="skill-badge">Live Radar</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Android Studio</span>
+                <span class="skill-badge">IDE & Emulation</span>
+              </div>
+              <div class="skill-tile">
+                <span class="skill-name">Firebase Suite</span>
+                <span class="skill-badge">Cloud Backend</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== CONTACT / COLLABORATION ====== -->
+    <section class="craft-section craft-contact" id="contact">
+      <div class="craft-container">
+        
+        <div class="contact-card-box reveal-on-scroll">
+          <div class="contact-inner">
+            
+            <div class="status-pill status-pill--inline">
+              <span class="status-radar"><span class="radar-core"></span></span>
+              <span>Accepting New Inquiries</span>
+            </div>
+
+            <h2 class="contact-title">Let’s build something remarkable.</h2>
+            <p class="contact-desc">
+              Have an app idea, need a mobile product built, or looking for a frontend developer? Drop me a line and let's discuss how to bring it to life.
+            </p>
+
+            <div class="contact-options-row">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ranaalishahid442@gmail.com" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--primary" id="openGmailBtn" title="Directly compose email in Gmail">
+                <span class="btn-icon">✉️</span>
+                <span class="btn-text">ranaalishahid442@gmail.com</span>
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://wa.me/923374047627" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--outline btn--whatsapp" title="Chat directly on WhatsApp (+92 337 4047627)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 012.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.74 2.66 4.21 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                <span>WhatsApp Chat</span>
+              </a>
+              <a href="https://github.com/ranaalishahid442-sys" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--outline">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Profile</span>
+              </a>
+              <a href="https://www.fiverr.com/s/61YqK7b" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--outline btn--fiverr">
+                <span class="fiverr-mark">fi</span>
+                <span>Fiverr Orders</span>
+              </a>
+            </div>
+
+            <!-- Alternate email actions -->
+            <div class="contact-sublinks">
+              <button class="sublink-btn" id="copyEmailBtn" data-email="ranaalishahid442@gmail.com" title="Copy email address to clipboard">
+                <span>📋 Copy address</span>
+              </button>
+              <span class="sublink-sep">·</span>
+              <a href="mailto:ranaalishahid442@gmail.com" class="sublink-btn">
+                <span>Open default mail client</span>
+              </a>
+            </div>
+
+            <!-- Toast alert for copied email -->
+            <div class="toast-notice" id="toastNotice" aria-live="polite">
+              ✓ Opening Gmail with ranaalishahid442@gmail.com...
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="craft-footer">
+    <div class="craft-container craft-footer__inner">
+      <div class="footer-left">
+        <a href="#hero" class="craft-logo">ali shahid<span class="logo-dot">.</span></a>
+        <p class="footer-tagline">Crafting digital products with intention and precision.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Tech Stack</a>
+        <a href="https://wa.me/923374047627" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://github.com/ranaalishahid442-sys" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.fiverr.com/s/61YqK7b" target="_blank" rel="noopener noreferrer">Fiverr</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ranaalishahid442@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ali Shahid. All rights reserved.</p>
+        <p class="footer-sub">Designed & engineered with modern web standards.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== PROJECT DETAILS MODAL ====== -->
+  <div class="craft-modal" id="projectModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      
+      <!-- Top Bar: Kicker + Close button -->
+      <div class="modal-header">
+        <div class="modal-kicker-badge">
+          <span class="modal-kicker-dot"></span>
+          <span class="modal-kicker" id="modalKicker">Mobile App · Capacitor 8.x</span>
+        </div>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="1" y1="1" x2="13" y2="13"></line>
+            <line x1="13" y1="1" x2="1" y2="13"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scrollable / Neat Body -->
+      <div class="modal-body-scroll">
+        <h3 class="modal-title" id="modalTitle">FlowFit — AI & Workout Tracker</h3>
+        <p class="modal-summary" id="modalSummary">
+          High-performance fitness tracking mobile application with an interactive exercise directory, metabolic macro calculator, and background workout audio.
+        </p>
+
+        <!-- Compact Bento Specs Grid -->
+        <div class="modal-specs-bento">
+          
+          <div class="bento-spec-item bento-spec--half">
+            <span class="spec-label">PLATFORM</span>
+            <span class="spec-value" id="modalPlatform">Android Native & Web</span>
+          </div>
+
+          <div class="bento-spec-item bento-spec--half">
+            <span class="spec-label">STATUS</span>
+            <span class="spec-value" id="modalStatus">Android Native Ready</span>
+          </div>
+
+          <div class="bento-spec-item bento-spec--full">
+            <span class="spec-label">CORE ARCHITECTURE</span>
+            <span class="spec-value" id="modalArch">Capacitor 8.x · Android Studio · JS · CSS3</span>
+          </div>
+
+          <div class="bento-spec-item bento-spec--full">
+            <span class="spec-label">KEY INNOVATIONS</span>
+            <span class="spec-value" id="modalFeatures">3D Fitness Avatars · Muscle Maps · Dynamic Island Audio · Offline Cache</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom CTAs -->
+      <div class="modal-footer-cta">
+        <button class="craft-btn craft-btn--sm craft-btn--outline" id="modalCloseAction">Close</button>
+        <a href="https://github.com/ranaalishahid442-sys/FlowFit" target="_blank" rel="noopener noreferrer" class="craft-btn craft-btn--sm craft-btn--primary" id="modalRepoBtn">
+          <span>GitHub Code</span>
+          <svg width="13" height="13" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
